@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "f0585000-63e9-443c-8b45-02f2c910b337",
+		"name": "CODA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49076701",
+		"_collection_link": "https://dumbtose-786495.postman.co/workspace/dumbtose's-Workspace~8b7efcb5-d3a1-4dd5-841b-9f540ebad85c/collection/49076701-f0585000-63e9-443c-8b45-02f2c910b337?action=share&source=collection_link&creator=49076701"
+	},
+	"item": [
+		{
+			"name": "Pages",
+			"item": [
+				{
+					"name": "List Pages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create a Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New Page using POST API \",\n  \"subtitle\": \"See the status of new API tasks.\",\n  \"iconName\": \"rocket\",\n  \"imageUrl\": \"https://example.com/image.jpg\",\n  \"parentPageId\": \"canvas-bCQlrRkWRM\",\n  \"pageContent\": {\n    \"type\": \"canvas\",\n    \"canvasContent\": {\n      \"format\": \"html\",\n      \"content\": \"<p><b>This</b> is rich text for my API PAGE using POST</p>\"\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages/:pageid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages",
+								":pageid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								},
+								{
+									"key": "pageid",
+									"value": "canvas-4je1_vvFO6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages/:pageid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages",
+								":pageid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								},
+								{
+									"key": "pageid",
+									"value": "canvas-bCQlrRkWRM"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a Deleted Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages/:pageid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages",
+								":pageid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								},
+								{
+									"key": "pageid",
+									"value": "canvas-4je1_vvFO6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a Page",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Launch Status\",\n  \"subtitle\": \"See the status of launch-related tasks.\",\n  \"iconName\": \"rocket\",\n  \"imageUrl\": \"https://example.com/image.jpg\",\n  \"isHidden\": true,\n  \"contentUpdate\": {\n    \"insertionMode\": \"append\",\n    \"canvasContent\": {\n      \"format\": \"html\",\n      \"content\": \"<p><b>This</b> is rich text</p>\"\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages/:pageid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages",
+								":pageid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								},
+								{
+									"key": "pageid",
+									"value": "canvas-PRkVwFXft4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Begin Content Export",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"outputFormat\": \"html\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages/:pageid/export",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages",
+								":pageid",
+								"export"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								},
+								{
+									"key": "pageid",
+									"value": "canvas-PRkVwFXft4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Content Export Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid/pages/:pageid/export/:requestid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid",
+								"pages",
+								":pageid",
+								"export",
+								":requestid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								},
+								{
+									"key": "pageid",
+									"value": "canvas-PRkVwFXft4"
+								},
+								{
+									"key": "requestid",
+									"value": "1524e5cb-ecce-44da-a4ce-21628a642ed6"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Docs",
+			"item": [
+				{
+					"name": "List of all Docs",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Info on a Doc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "GhI8pRPvMz"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Doc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Updating my Project Name\",\n  \"iconName\": \"rocket\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "TQsoiORtVh"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Doc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"My Post Request\",\n  \"sourceDoc\": \"GSCjKrAkPV\",\n  \"folderId\": \"fl-0Ggy0M02tt\",\n  \"initialPage\": {\n    \"name\": \"Launch Status\",\n    \"subtitle\": \"See the status of launch-related tasks.\",\n    \"iconName\": \"rocket\",\n    \"imageUrl\": \"https://example.com/image.jpg\",\n    \"pageContent\": {\n      \"type\": \"canvas\",\n      \"canvasContent\": {\n        \"format\": \"html\",\n        \"content\": \"<p><b>This</b> is rich text</p>\"\n      }\n    }\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://coda.io/apis/v1/docs",
+							"protocol": "https",
+							"host": [
+								"coda",
+								"io"
+							],
+							"path": [
+								"apis",
+								"v1",
+								"docs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Doc",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "df6dc731-deb8-42ea-b40b-4639c8e9c3a8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"title\": \"Updating my Project Name\",\n  \"iconName\": \"rocket\"\n}"
+						},
+						"url": {
+							"raw": "{{API_URL}}{{API_PREFIX}}/:docid",
+							"host": [
+								"{{API_URL}}{{API_PREFIX}}"
+							],
+							"path": [
+								":docid"
+							],
+							"variable": [
+								{
+									"key": "docid",
+									"value": "TQsoiORtVh"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
